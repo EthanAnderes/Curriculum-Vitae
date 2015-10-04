@@ -1,7 +1,24 @@
 \documentclass[11pt]{article}
 %\documentstyle{article}
-\usepackage{hyperref,color}
-\hypersetup{colorlinks=true,urlcolor=blue}
+
+% hyperref setup
+\usepackage{amsmath}
+\usepackage{epsfig,graphics}
+\usepackage{etoolbox}
+\usepackage{hyperref,url}
+\hypersetup{colorlinks=true,urlcolor=blue,citecolor=Cerulean}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\makeatletter
+\def\@footnotecolor{red}
+\define@key{Hyp}{footnotecolor}{%
+ \HyColor@HyperrefColor{#1}\@footnotecolor%
+}
+\patchcmd{\@footnotemark}{\hyper@linkstart{link}}{\hyper@linkstart{footnote}}{}{}
+\makeatother
+\hypersetup{footnotecolor=blue}
+
+
+
 
 \usepackage{enumitem}
 \setenumerate{leftmargin=*}
@@ -60,11 +77,11 @@
   \begin{Large}
     \textbf{Ethan Berger Anderes} \\ \vspace{5pt}
   \end{Large}
-  Curriculum Vitae as of October 2015\\
+  Curriculum Vitae\footnote{Suppporting documents, including publication preprints, can be found at \url{https://github.com/EthanAnderes/Curriculum-Vitae}}\\
   Department of Statistics\\
   University of California at Davis\\
   (773) 315-3613\\
-  \texttt{anderes@ucdavis.edu}\\
+  \texttt{anderes@ucdavis.edu}
 \end{center}
 
 \flushleft
@@ -174,6 +191,8 @@ E. Anderes and M. Coram.  \textsl{A general spline representation for nonparamet
 
 
 
+\newpage
+
 
 %\vspace{7pt}
 \head{Published Papers}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -277,40 +296,52 @@ Title: {\sl Deformations in statistics, cosmology and image analysis.}
 
 \vspace{7pt}
 
-\datedentry{NSF grant DMS-1007480 }{2009-present}\\
+\datedentry{NSF grant DMS-1007480 }{2009-2014}\\
 Title: {\sl Local Likelihood Estimation for Nonstationary Random Fields.}
 
 \vspace{9pt}
 
-\datedentry{NSF Mathematical Sciences Postdoctoral Fellowship\\
-University of California at Berkeley}{2005-2008}
+\datedentry{NSF Mathematical Sciences Postdoctoral Fellowship}{2005-2008}
+University of California at Berkeley
 
 
 \head{Professional Service}
 
 
-\datedentry{Treasurer\\ Nonparametric Section of the American Statistical Association}{2015}
+\datedentry{Treasurer}{2015}
+Nonparametric Section of the American Statistical Association
 
 \vspace{7pt}
 
-
-\datedentry{Associate Editor\\ The American Statistician}{2013 - 2014}
-
-\vspace{7pt}
-
-\datedentry{President\\ Sacramento branch of the ASA}{2011}
+\datedentry{Co-organizer}{2014}
+UC Davis Statistical Sciences Symposium on \\
+Spatial-Temporal Statistics: Methods and Applications, UC Davis
 
 \vspace{7pt}
 
-\datedentry{Vice President\\ Sacramento branch of the ASA}{2010}
+\datedentry{Associate Editor}{2013 - 2014}
+The American Statistician
 
 \vspace{7pt}
 
-\datedentry{Co-organizer\\  Workshop on Statistical Methods for Astronomy and\\ Astrophysics, UC Davis}{2011}
+\datedentry{President}{2011}
+Sacramento branch of the ASA
 
 \vspace{7pt}
 
-\datedentry{Member\\ Universe at UCDavis Initiative}{2008 - present}
+\datedentry{Vice President}{2010}
+Sacramento branch of the ASA
+
+\vspace{7pt}
+
+\datedentry{Co-organizer}{2011}
+UC Davis Statistical Sciences Symposium on \\
+Statistical Methods for Astronomy and Astrophysics, UC Davis
+
+\vspace{7pt}
+
+\datedentry{Member}{2008 - present}
+Universe at UCDavis Initiative
 
 
 \vspace{5pt}

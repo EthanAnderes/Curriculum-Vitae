@@ -1,0 +1,311 @@
+\documentclass[12pt]{article}
+%\documentclass[11pt,doublespacing]{article}
+
+%%%%%%%%%%%%%%%%%%%%
+%% MISC. PACKAGES %%
+%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath,amsthm,amssymb,epsf}
+\usepackage{bm} %% Bold Math
+\usepackage{graphicx,psfrag}
+\usepackage{epstopdf}
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{enumitem}
+\setenumerate{leftmargin=*}
+\usepackage{subfigure}
+\bibliographystyle{plain}
+
+\usepackage{geometry}
+\geometry{letterpaper,left=1.25in,right=1.25in,top=1.1in,bottom=1.1in}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\newcommand*{\bs}{\boldsymbol}
+
+
+%\title{Research Statement}
+%\author{Ethan B. Anderes}
+\begin{document}
+%\maketitle
+\begin{center} {\large \bf Ethan Berger Anderes}  \vspace{.2cm}\\ \bf Research Statement \\ {\small October 2013}\end{center}
+
+\subsection*{Overview}
+
+This note is intended as a summary of the research accomplishments I have developed throughout  my academic career up to this point. I will start with a very general overview of what motivates my work and the general themes in my research. Then, in the following section, I will give a more detailed description of  specific research highlights.
+
+
+Very broadly my work can be characterized as the study of statistical problems which have some nontrivial  component of spatial dimension.
+%In the field of spatial statistics, for example, I've worked on nonstationary random field models with application to environmental and cosmological statistical problems. In multivariate density estimation, I have researched ways to generate density estimate which can incorporate prior morphological shape information. I've also worked on computational techniques for prediction and likelihood estimation for spatially correlated data.
+I am particularly interested in statistical problems where the answers or methods depend on the dimension of the ambient space $\Bbb R^d$.
+A cogent example of this phenomenon, described in detail below, concerns the equivalence or orthogonality of a large class of Gaussian random field models with separate variance and spatial scale parameters. The conclusion, very briefly,
+is that under fixed domain asymptotics: when  $d=1,2,3$
+ it is impossible to consistently distinguish a change in pointwise variance with  a change in spatial scale; but when $d>4$ the opposite is true so that variance and scale are consistently distinguishable ($d=4$ is still open).
+Problems like these, where spatial dimension play a fundamental role in the statistical conclusions, are what  motivate a large part of my work.
+
+ A second characterizing feature of my research is the use of smooth invertible transformations\textemdash or deformations\textemdash in solutions to statistical problems. Deformations can provide an elegant tool  for  such things as developing nonstationary random field models, incorporating prior morphological shape information in multivariate density estimates, and for
+ computational approximations to spatial prediction, to name a few. In my work with cosmologist Lloyd Knox we analyze and estimate a physical deformation arising in cosmology which is, not only observable, but also characterizes the density fluctuations of dark matter.
+ %This deformation arises  from the gravitational distortion of light as it passes through dark matter, called gravitational lensing.
+ The main challenge of working with deformations  is their non-linear nature: adding two deformations does not necessarily result in another deformation.  This makes it difficult to construct flexible classes of deformations, find estimates and quantify statistical uncertainty. Indeed, a large part of my work is dedicated to overcoming these difficulties and exploring solutions which will make deformations a flexible and powerful tool for the statistician practitioner.
+
+  %this relatively new object to statistics.
+ %However, these difficulties are not insurmountable and a large part of my work is detected to
+ % and some solutions have been found but they also provides  exciting posibilities for future research.
+
+
+ One last feature of my work, which is worth stating in the overview, is that I have made a point of researching both applied and theoretical problems in statistics.  My hope is that, taken together, they give me a broader perspective on statistical inference in general.
+ The majority of my applied work is focused on using deformation estimates to measure the density fluctuations of dark matter from cosmic microwave background observations.
+  In contrast, my theoretical work has been primarily dedicated to proving fixed domain asymptotic results for random fields, especially in the context of nonstationarity induced by a spatially varying local scale.
+Both the applied and theoretic problems have been rewarding and interesting.
+%, especially seeing the cosmologist's persepctive on statistics. %, not to mention and for sharpening my skills in Fourier space for which the cosmologes are extremely nimble.
+%Another by-product of the applied work is the exposure to new statistical problems which have yet to be theoretically analyzed.
+Indeed, I plan to continue working on both types of problems: applied work to connect with the scientific community  while also using theoretical statistical arguments to gain a deeper  understanding of the statistical problems at hand.
+
+
+  %The applied work I've done has been very useful in giving me persepective on what is important, at least to the particular problems I've been working on. That said, I do think that theoretical work is importmant in completing a full understanding of statistical inference.
+
+%My  theoretical and applied aspects of spatial statistics. In particular, to the use of deformations or smooth invertible transformations of $\Bbb R^d$ to model random field nonstatinatriy, estimate the distribution of dark matter, developing non-parametric and semi-parametric multivariate density estimate and for spatial likelihood computational problems.
+%
+%
+%
+%I started my research career trying to understand a particular non stationary random field model used in Spatial statistics, initially proposed by Sampson and Guttorp. The idea is to use a warping, deformation or invertible transformation of the coordinates of an isotropic random field to model local spatially varying  sheer and magnification, and more generally nonstatioanry processes. Michael Stein and I studied using local likelihoods to estimate spatially varying sheer, which was used to generate quasi-conformal estimates of the coordinate warping. This work led to three separate research tracks.
+% First, due to the difficulty in analyzing local likelihood methods for estimating local covariance structures, Sourav Chatterjee and I developed an estimate based on local quadric variations. We established the consistency of the estimated war pings under local fractional behavior of the underlining two dimensional field.. This led to the first such consistency result under fixed domain asymptotics of the observed field.
+%  The second research track was in developing a technique for smoothly downing, and reducing edge effect bias, for local likelihood estimates of local covariance structure in random field models. The main innovation being that by downwaithign terms in a telecopying sum of the likelihood increments one can compute the local estimates in no more time than a ...
+%The third line of research, initialted from my beginning investigation of , was in estimating weak lensing of the cosmic . There was two motivations for this line of research. The first was a desire to broaden my research to science application and the realization that weak lensing of the cosmic microwave background was not only a challahgin statistical problem with high scientific implication, but that the model of weak lensing was essestianlly a warped Gaussian random field with specific random field structure. ..
+
+
+
+
+
+\subsection*{Research Highlights}
+
+
+
+\paragraph{Nonstationary models for random fields.}
+%My work in this area started as a graduate student under the direction of Michael Stein in the statistics department at University of Chicago.
+% and has culminated in the recent collaboration with Sourav Chatterjee (UC Berkeley).
+Recognizing the importance of nonstationary random fields due to the recent abundance of large data sets from remote sensing and satellite imagery, Michael Stein (University of Chicago) and I started studying deformed isotropic random fields as a flexible class of nonstationary models. At that time, methods for estimating deformed isotropic random fields had been developed only when observing the deformed field at sparse spatial locations  with independent replicates. The ubiquity of high resolution imagery led us to study a different observation scenario under which one observes a single realization of the deformed field on a dense grid. Our research led to the the paper \ref{AS1} in which we develop a complete
+methodological package---from model assumptions to algorithmic recovery of the
+deformation---for the class of nonstationary processes obtained by deforming
+isotropic Gaussian random fields in two dimensions. A key contribution of this research is the use of quasiconformal theory as a tool, in two dimensions,  for modeling and estimating deformations. Two other notable contributions  are the careful analysis of the smoothing problem for locally estimated parameters and the development of an algorithm for recovery of the invertible transformation from the estimated parameters.
+
+Soon after the paper with Michael Stein,
+% arriving at UC Berkeley
+ I began investigating consistency questions related to the deformed random field model. The natural regime to study these questions is fixed domain asymptotics where one observes a fixed realization of the deformed random field on a grid where the grid spacing approaches zero. At that time it was not clear whether one could control the propagation of error through the nonlinear transform that relates the estimable parameters with the invertible deformation. In  collaboration with Sourav Chatterjee (Courant Institute, NYU) we developed chaining arguments to control the supremum of the error field for  kernel smoothed quadratic variation estimators. Using these techniques, along with some surprisingly useful results about Bergman spaces and projections, we  established strong consistency results under mild assumptions on the isotropic random field and the deformation in two dimensions (see \ref{AC}).
+
+
+
+
+\paragraph{Equivalence and orthogonality of Gaussian random field models.}
+The problem of estimating a scale and sheer of the local coordinates of a deformed isotropic  field leads naturally to questions relating to estimating the effects of an unknown spatial scale and an unknown amplitude change in a single realization of a Gaussian random field.
+%The paper \ref{A1} titled ``On the consistent separation of scale and variance for Gaussian random fields" we study the relationship between random fields with unknown time changes and unknown amplitude changes.
+ In particular, let $Z(x)$ be a stationary random field on $x\in \Bbb R^d$. The main question is: can one consistently tell the difference between a realization of $Z(\alpha x)$ and a realization of $\sigma Z(x)$. This question was motivated by the seminal work of Hao Zhang \ref{ZH} who showed, perhaps surprisingly, that when  $d\leq 3$, $Z$ is a Gaussian Mat\'ern random field, and $\alpha^{2\nu} = \sigma^2$ (in this case $\nu$ is a particular smoothness parameter), then it is impossible to distinguish between these two models when both fields are observed everywhere, without noise, on a bounded spatial region in $\Bbb R^d$.
+  % This result had practical implications since some of the most common Gaussian random field models had both a spatial scale $\alpha$ and $\sigma$ as parameters. The inconsistency result of Hao Zhu showed that  impossible to consistently distinguish the difference between $\alpha$ and $\sigma$.
+ As an extension of this result I was able to establish in \ref{A1} the opposite is true when  $d>4$:  one can consistently estimate $\alpha$ and $\sigma^2$ under fixed domain asymptotics  for  Gaussian Mat\'ern random fields ($d=4$ is still open).
+The paper utilizes quadratic variations  and a careful study of rates to (in certain cases) get an estimate of the coefficient on the second principle irregular term which then allows one to separate the effects of $\alpha$ and $\sigma^2$.
+
+
+
+
+\paragraph{Estimating weak lensing of the Cosmic microwave background.}
+The majority of my applied work in the field of cosmology has been dedicated to estimating the gravitational distortion of cosmic microwave background (CMB) radiation as it passes through dark matter.  The CMB is a remnant of the big bang and fills the Universe with an almost-uniform radiation.
+   Recent observations can map the microscope variations from uniformity in the CMB.
+    %This provides a wealth of information for cosmology and cosmic structure.
+    However, the observations do not precisely map the CMB, but a slight distortion due to the bending of the CMB light from intervening matter. This is call gravitational lensing. Estimating this lensing is important for a number of reasons including, but not limited to, understanding cosmic structure, constraining cosmological parameters and detecting gravity waves.
+ My work in this area has resulted in two papers \ref{AK}, \ref{AP} published in Physical Review D, two conference papers \ref{A2},\ref{AV}  and a technical report currently under review \ref{A4}.
+
+ The results found in \ref{AK} and \ref{AV} develop a new local likelihood estimate of weak lensing and was done under collaboration with Lloyd Knox (Professor of Physics, UC Davis) and Alexander van Engelen (Postdoc, Department of Physics, Stony Brook).  Our method avoids the computational difficulties associated with a full scale likelihood approach and circumvents the typical Taylor truncation bias which corrupts most other estimates of lensing.  This approach estimates the local curvature of the gravitational potential on sliding local neighborhoods of the observed CMB and polarization fields. A low pass filter of the true gravitational potential is then constructed by stitching together local curvature estimates. One of the main advantages of this approach is that it can easily handle point source foregrounds, masking, nonstationary noise and nonstationary beams.
+% The local analysis allows one to avoid using the typical first order Taylor expansion for the quadratic estimator and  avoids the likelihood approximations used in global estimates.
+ % Moreover, the likelihood is computed in position space and therefore
+%   This research led to the paper \ref{AK} and the conference paper \ref{AV} which extends our initial results to the case of estimating the spectral density of the lensing potential.
+
+The results found in \ref{AP} and \ref{A4} study the state-of-the-art quadratic estimator of weak lensing,  initially developed by Hu and Okamoto \ref{H1}, \ref{H2}.
+This estimator is interesting from two perspectives. First, from a statistical standpoint the estimator is not completely understood. The quadratic estimator works by estimating the correlation across the Fourier frequencies of the lensed CMB, due to the nonstationary of the lensing effect. This is a subtle operation and leads to unexpected statistical behavior in the estimator. Secondly, from a scientific perspective, this estimator is the state-of-the-art for reconstructing the weak lensing distortion of the CMB. This makes it an indispensable tool for probing the nature of dark matter. It is these two perspectives, statistical and scientific, that make it an interesting object of study.
+
+Our most recent findings  have resulted in a manuscript titled: ``Decomposing CMB lensing power with simulation" \ref{A4}. The quadratic estimator of weak lensing works in part through a delicate cancelation of terms in a Taylor expansion of the lensing effect on the CMB. In our manuscript we present two simulation based approaches for exploring the nature of this cancelation for both the CMB intensity and the polarization fields. One of the highlights of this paper is a detailed analysis of a recent proposal for a bias-reduced modified quadratic estimator.  We find that the modified quadratic estimate does reduce estimation bias. However, this is accomplished by effectively increasing the magnitude of a first and second order bias to the point of cancelation when the correct model for the spectral density of the gravitational potential is used to generate the lensed weights. This is different behavior than was previously expected and can effect future experimental results. We demonstrate, that in future ACTpol/SPTpol experiments  the bias in the EB estimator can be effectively ignored. For the TE and the EE estimators, however, the bias does contribute significantly to projected error bars and may need to be corrected to give the estimator inferential power beyond a nominal fiducial uncertainty.
+
+
+ In the paper \ref{AP} we study the advantages obtained by relaxing the first order unbiasedness constraint used to derive the quadratic estimator. Our new estimate requires the user to propose a fiducial model for the spectral density of the unknown lensing potential but the resulting estimator is developed to be robust to misspecification of this model. The role of the fiducial spectral density is to give the estimator superior statistical performance in a neighborhood of the fiducial mode while controlling the statistical errors when the fiducial spectral density is drastically wrong. One of the biggest advantages of our new estimate is the Bayesian underpinnings of the estimator which allow construction of estimates and uncertainty quantification for nonlinear functionals  of the gravitational potential.
+
+%
+%In the paper\ref{A2}, the main object of study in this paper is the generic filtering problem where one observes a random field (the signal) corrupted with independent generalized noise. The optimal solution is normally given by Wiener filtering. However, this requires knowledge of the spectral density of spectral density. This paper analyzes a Bayesian adaptive approach to Wiener filtering when there is uncertainty in the signal spectral density. The natural way to account for this uncertainty is to use a full Bayesian approach with Markov Chain Monte Carlo (MCMC) sampling techniques to obtain approximate samples from the posterior distribution of the signal given the data. The main difficulty with this approach is the elicitation of an appropriate prior and the development of accurate MCMC technique with good diagnostics.  In this paper we explore an alternative approach which utilizes robust Bayesian techniques to generate an adaptive shrinkage adjustment to the nominal Wiener filter. The resulting estimate (the posterior expected value of the true signal) has closed form and behaves adaptively and robustly to misspecification of the fiducial spectral density. Moreover, the corresponding posterior samples are exceeding easy to generate without MCMC.
+%
+
+%In the paper\ref{A4}
+
+
+\paragraph{Transformation methods for nonparametric density estimation.}
+After my exposure to the elegance of using  smooth invertible transformations for developing flexible, physically realistic models of nonstationary random fields I began investigating their use in other areas of statistics. Marc Coram (Stanford) and I started using these  transformations for nonparametric and semi-parametric density estimation problems.   We began by seeing whether estimating an invertible transformation to a target density could be realistically done and whether these methods could solve some curse of dimensionality issues in  high-dimensional density estimation.
+%ome of the highlights of this collaboration are the development of flexible parametric classes of quasiconformal maps and tools
+%for searching  through these spaces using a gradient ascent type  algorithm. The gradient ascent method uses variational results from quasiconformal theory that relates small perturbations in a complex dilatation parameterization to a vector field perturbation of the associated invertible map.
+
+
+One of the major developments of the past year  has been the proof of a spline-type characterization of an infinite dimensional optimization problem for estimating a transformation or deformation of $\Bbb R^d$ which pushes forward an unknown sampling distribution to some known target probability measure. The main challenge of working with deformations is their non-linear nature: adding two deformations does not necessarily result in another deformation. This makes it difficult to construct flexible classes of deformations, find estimates and quantify statistical uncertainty.  In the report \ref{ACo2} we circumvent these challenges by adapting the powerful tools developed by Grenander, Miller, Younes, Trouve and co-authors in the image processing and computational anatomy literature to generate estimates of the deformation with all the required properties: nonparametric flexibility, smoothness, invertability and computational tractability. We establish the existence of a penalized maximum likelihood estimate of a deformation which has a finite dimensional characterization similar to those results found in the spline literature. This finite dimensional characterization is a key component of the numerical computation of these estimates which are nominally defined as an infinite dimensional minimizer of a penalized likelihood. The spline-type representation establishes that the initial velocity field, in a geodesic dynamic flow representation of the deformation model, must be a member of a known finite dimensional subset of a reproducing kernel Hilbert vector space. Our results are derived utilizing an Euler-Lagrange characterization of the PMLE which also establishes a surprising connection to a generalization of Stein's lemma for characterizing the normal distribution.
+
+
+One of the applications of a warping characterization of a probability density function is the ability to generate  nonstationary  covariance tapers. The paper \ref{AH} explores this application for the problem of spatial kriging.
+This work has been done in collaboration with a number of researchers at a variety of institutions:  Raphael Huser (Ph. D. student, Switzerland); Douglas Nychka (National Center for Atmospheric Research); Marc Coram (Department of Health Research and Policy, Stanford). In \ref{AH}, we show how to  generate  nonstationary  covariance tapers such that the taper neighborhoods can depend on observation density: larger neighborhoods for sparsely observed areas; smaller neighborhood for densely observed areas. This  ensures that tapering neighborhoods do not have too many points to cause computational problems but simultaneously have enough local points for accurate prediction.
+
+
+\paragraph{Local likelihood estimation for nonstationary random fields.}
+In the paper \ref{AS2}, Michael Stein and I develop a weighted local likelihood estimate for the parameters that govern the local spatial dependency of a locally stationary random field. The advantage of this local likelihood estimate is that it smoothly downweights the influence of faraway observations, works for irregular sampling locations, and when designed appropriately, can trade bias and variance for reducing estimation error.
+
+The motivation for this paper arose from the problem of estimating the local distortion of a warped isotropic random field \ref{AS1}. In that paper we simply divided the observation locations into local neighborhoods and fitted a linear distortion of the isotropic random field on each neighborhood. Typically two problems arise with this approach. First, the range of validity of a stationary approximation can be too small to contain enough local data to estimate it. Second, it can produce non-smooth local parameter estimates, which is undesirable in many cases. There do exist alternative weighted local likelihood techniques, but unfortunately they are not applicable to random fields. These alternative techniques utilize the independence structure of the data to decompose the log-likelihood as a sum, the summands of which are downweighted as a function of some spatial covariate. In the random field case, however, there is no independence and no such decomposition of the log-likelihood.
+In \ref{AS2} we present an exposition, through computation, simulation and some theory, of our version of local likelihood estimation.
+The local likelihood is generated by re-weighting  terms in a telescoping sum of the incremental changes in a stationary likelihood when adding observations by their distance to a local neighborhood midpoint.
+A large portion of the paper is devoted to the discussion of different ways of constructing and estimating the weights used in our local likelihood that downweight the influence of distant observations of the random field.
+
+\paragraph{Cloud height estimation from satellite imagery.}
+Clouds play a major role in determining the Earth's energy budget. As a result,  monitoring and characterizing the distribution of clouds becomes  important  in global studies of climate. In collaboration with Bin Yu (UC Berkeley) and the MISR team at the Jet Propulsion Laboratory we developed a new stereo matching algorithm for cloud height estimation using multi-angle cameras provided by the MISR instrument on the Terra satellite. By viewing the multi-angle cloud images as discrete sub-samples of a continuous random random field, one can view  cloud-top height estimation as a statistical parameter estimation problem.
+Under this paradigm new tools become available for recovering the height from the MISR images and, in some cases,  improve sensitivity and allow fine tuning for different cloud ensembles.
+Our work on the new height estimator resulted in a sub-contract  award for two months of research funded by the Jet Propulsion Laboratory. The main focus of this project was to use the special nature of our new estimator to recover the heights of a two layer cloud ensemble: an optically thin high cloud layer and a bottom, optically thick and textured cloud. Our results are reported in the the paper \ref{AY}.
+
+
+
+\section*{References}
+
+\begin{enumerate}[labelindent=0pt,label={[\arabic*]}]
+
+\item\label{A1}
+Anderes, E. (2010):  On the consistent separation of scale and variance for gaussian random fields. \textit{The Annals of Statistics} {\bf 38}, 870-893.
+
+
+\item\label{A2}
+Anderes, E. (2012a):  Robust Adaptive Wiener Filtering.  Refereed paper for \textit{IEEE International conference on image processing}.
+
+
+\item\label{A3}
+Anderes, E. (2012b): Kriging.  \textit{Encyclopedia of Environmetrics ed2}, Wiley.
+
+
+\item \label{A4}
+Anderes, E. (2013):
+Decomposing CMB lensing power with simulation. \\
+\textit{To appear in: Physical Review D}
+
+\item\label{AC}
+Anderes, E. and Chatterjee, S. (2009): Consistent estimates of deformed isotropic gaussian random fields on the plane. \textit{The Annals of Statistics} {\bf 37}, 2324-2350.
+
+
+\item\label{ACo1}
+Anderes, E. and Coram, M. (2011):   Two dimensional density estimation using smooth invertible transformations.
+ \textit{Journal of Statistical Planning and Inference} {\bf 141}, 1183-1193.
+
+
+
+
+\item\label{ACo2}
+Anderes, E. and Coram, M. (2012):  A general spline representation for nonparametric and semiparametric density estimates using diffeomorphisms.  arXiv:1205.5314.
+
+
+
+
+\item\label{AH}
+Anderes, E., Huser, R., Nychka, D., Coram, M. (2012): Nonstationary positive definite tapering on the plane. To appear in the \textit{Journal of Computational and Graphical Statistics.}
+
+
+
+
+\item\label{AK}
+Anderes, E., Knox, L., van Engelen, A.  (2011):  Mapping gravitational lensing of the CMB using local likelihoods.
+\textit{Physical Review D} {\bf 83}, 043523.
+
+
+
+
+
+
+\item\label{AP}
+Anderes, E. and Paul, D. (2012):  Shrinking the quadratic estimator of weak lensing.
+\textit{Physical Review D} {\bf 85}, 103003.
+
+
+
+
+
+
+\item\label{AS1}
+Anderes, E and Stein, M. (2008): Estimating deformations of isotropic gaussian random fields on the plane. \textit{The Annals of Statistics} {\bf 36}, 719-741.
+
+
+
+
+\item\label{AS2}
+Anderes, E. and Stein, M. (2011):  Local likelihood estimation for nonstationary random fields.  \textit{Journal of Multivariate Analysis} {\bf 102}, 506-520.
+
+
+
+
+\item\label{AV}
+Anderes, E. and van Engelen, A. (2012):  \textit{Statistical Challenges in Modern Astronomy V}, Springer-Verlag, New York.
+
+
+
+
+
+
+\item \label{AY}
+Anderes, E., Yu, B., Jovanovic, V., Moroney, C., Garay, M., Braverman, A., Clothiaux E. (2009):
+Maximum likelihood estimation of cloud height from multi-angle satellite imagery.   \textit{Annals of Applied Statistics} {\bf 3}, 902-921.
+
+
+\item \label{H1}
+Hu, W. (2001):
+Mapping the dark matter through the cosmic microwave background damping tail.
+\textit{Astrophys. J.} {\bf 557}, L79.
+
+\item \label{H2}
+Hu, W. and Okamoto, T. (2002):  Mass Reconstruction with Cosmic Microwave Background Polarization.
+\textit{Astrophys. J.} {\bf 574}, 566-574.
+
+
+
+\item \label{ZH}
+ Zhang, H. (2004):
+Inconsistent Estimation and Asymptotically Equal interpolations in model-based geostatistics. \textit{Journal of the American Statistical Association}, {\bf 99}, 250-261.
+
+ \end{enumerate}
+
+
+%
+%
+%\begin{thebibliography}{99}
+%
+%\bibitem[AS07]{AnderesStein2007}
+%E. Anderes and M. Stein.
+%\emph{Estimating deformations of isotropic Gaussian random fields on the plane.}
+%Accepted for publication in the \emph{Annals of Statistics.}
+%
+%
+%\bibitem[ACh07]{AnderesChatterjee2007}
+%E. Anderes and S. Chatterjee.
+%\emph{Consistent estimates of deformed isotropic Gaussian random fields on the plane.}
+%Submitted to the \emph{Annals of Statistics}.
+%Technical Report 739, Statistics Department, UC Berkeley (Oct. 2007).
+%
+%\bibitem[ACo07]{AnderesCoram2007}
+%E.  Anderes and M. Coram.
+%\emph{Two dimensional density estimation using smooth invertible transformations.}
+%Manuscript available at {\tt www.stat.berkeley.edu/\~{}anderes}
+%%Submitted to ??.
+%%Technical Report, Statistics Department, UC Berkeley (Nov. 2007).
+%
+%\bibitem[AYJMGBC07]{AnderesBin2007}
+%E. Anderes, B. Yu, V. Jovanovic, C. Moroney, M. Garay, A. Braverman, E. Clothiaux.
+%\emph{Estimating cloud height from multi-angle satellite imagery.}
+%Manuscript available at {\tt www.stat.berkeley.edu/\~{}anderes}
+%%Submitted to the \emph{??}.
+%%Technical Report, Statistics Department, UC Berkeley (Nov. 2007).
+%
+%
+%
+%\end{thebibliography}
+
+
+\end{document}
